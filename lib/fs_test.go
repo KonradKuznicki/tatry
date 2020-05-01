@@ -39,8 +39,8 @@ func (this *LocalFSFixture) TestOperation() {
 	testName := "http://ttt.aaa/@#$%śś1234|\".jpg"
 	testConent := []byte("asdf")
 
-	this.fs.Write(testName, testConent)
-	readContent, err := this.fs.Read(testName)
+	_ = this.fs.Write(testName, testConent)
+	readContent, _ := this.fs.Read(testName)
 
 	this.Println(this.fs.FullPath(testName))
 	checkFile, err := ioutil.ReadFile(this.testTmpDir + "/http_ttt.aaa_1234_.jpg")
@@ -48,5 +48,4 @@ func (this *LocalFSFixture) TestOperation() {
 	this.So(err, should.BeNil)
 	this.So(testConent, should.Resemble, checkFile)
 	this.So(testConent, should.Resemble, readContent)
-
 }

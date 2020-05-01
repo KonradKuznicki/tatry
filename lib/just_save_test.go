@@ -13,11 +13,10 @@ func TestJustSaveFixture(t *testing.T) {
 
 type JustSaveFixture struct {
 	*gunit.Fixture
-	justSave   *JustSave
-	testTmpDir string
-	envelope   *Envelope
-	testChan   chan *Envelope
-	spyFS      *SpyFS
+	justSave *JustSave
+	envelope *Envelope
+	testChan chan *Envelope
+	spyFS    *SpyFS
 }
 
 func (this *JustSaveFixture) Setup() {

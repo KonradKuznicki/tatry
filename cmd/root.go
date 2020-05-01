@@ -51,8 +51,8 @@ func init() {
 	rootCmd.PersistentFlags().StringP("author", "a", "Konrad Kuznicki", "Konrad Kuznicki")
 	rootCmd.PersistentFlags().StringVarP(&userLicense, "license", "l", "GNU GPLv3", "Open")
 	rootCmd.PersistentFlags().Bool("viper", true, "use Viper for configuration")
-	viper.BindPFlag("author", rootCmd.PersistentFlags().Lookup("author"))
-	viper.BindPFlag("useViper", rootCmd.PersistentFlags().Lookup("viper"))
+	_ = viper.BindPFlag("author", rootCmd.PersistentFlags().Lookup("author"))
+	_ = viper.BindPFlag("useViper", rootCmd.PersistentFlags().Lookup("viper"))
 	viper.SetDefault("author", "Konrad Kuznicki konrad@kuznicki.me")
 	viper.SetDefault("license", "GNU GPLv3")
 
@@ -63,7 +63,7 @@ func init() {
 	rootCmd.Flags().DurationP("background-rotation", "r", time.Second*30, "how often should app rotate background image")
 	rootCmd.Flags().StringSliceP("URLs", "u", []string{}, fmt.Sprintf("list of URLs from which images should be rotated on background (default [%s, ...%d])", cams[0], len(cams)))
 	rootCmd.Flags().StringP("cache-dir", "c", "", "directory to store downloaded background images (default is $HOME/.cache/tatry)")
-	viper.BindPFlags(rootCmd.Flags())
+	_ = viper.BindPFlags(rootCmd.Flags())
 
 	rootCmd.Run = func(cmd *cobra.Command, args []string) {
 

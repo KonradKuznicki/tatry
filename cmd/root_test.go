@@ -38,7 +38,7 @@ func (this *RootCMDFixture) Teardown() {
 
 func (this *RootCMDFixture) LongTestRun() {
 
-	go rootCmd.Execute()
+	go func() { _ = Execute() }()
 
 	time.Sleep(time.Second * 3)
 

@@ -1,0 +1,12 @@
+download-parallelism: 1
+URLs:
+ - http://pogoda.topr.pl/download/current/kwgs.jpeg
+ - http://pogoda.topr.pl/download/current/hala.jpeg
+ - http://pogoda.topr.pl/download/current/kscw.jpeg
+ - http://pogoda.topr.pl/download/current/dcho.jpeg
+ - http://pogoda.topr.pl/download/current/mors.jpeg
+ - http://pogoda.topr.pl/download/current/momn.jpeg
+ - http://pogoda.topr.pl/download/current/psps.jpeg
+ - http://pogoda.topr.pl/download/current/psdb.jpeg
+ # - http://pogoda.topr.pl/download/current/kwgraaaaaaaa.jpeg
+ - http://pogoda.topr.pl/download/current/hgkw.jpeg

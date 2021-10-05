@@ -33,7 +33,7 @@ jobs:
 
       - name: Generate coverage report
         run: |
-          go test `go list ./... | grep -v examples` -coverprofile=coverage.txt -covermode=atomic
+          go test -short `go list ./... | grep -v examples` -coverprofile=coverage.txt -covermode=atomic
 
 
 

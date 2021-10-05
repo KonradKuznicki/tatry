@@ -57,5 +57,3 @@ option to create collage from selected images instead of rotating them
 ### Other OSs
 I plan to add support for MacOS nad Windows <br />
 and support packets for Ubuntu
-
- 

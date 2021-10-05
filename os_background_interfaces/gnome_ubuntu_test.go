@@ -22,13 +22,13 @@ func (this *GnomeUbuntuFixture) Setup() {
 	this.setter = NewGnomeUbuntu(this.fs)
 }
 
-func (this *GnomeUbuntuFixture) TestBackgroundSet() {
+func (this *GnomeUbuntuFixture) LongTestBackgroundSet() {
 
 	path := "mountains-1362605.jpg"
 	this.setter.Set(path)
 
 	currentBackground := GnomeUbuntuCurrentBackground()
 
-	this.So("file:///home/projects/tatry/test-resources/"+path, should.Equal, currentBackground)
+	this.So("file://./test-resources/"+path, should.Equal, currentBackground)
 
 }
